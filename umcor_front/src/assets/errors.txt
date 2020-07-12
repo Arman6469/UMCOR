@@ -1,0 +1,6 @@
+[2020-7-10 13:31:51] layer "info@example.am": Unsupported extension: am
+[2020-7-10 13:31:51] layer "+374 00 00 00 00": Expected Either a default asset specification or a layer asset specification but "+" found.
+[2020-7-10 13:31:51] layer "RedLine.png": Duplicate path: RedLine.png
+[2020-7-10 13:31:51] layer "RedLine.png": Duplicate path: RedLine.png
+[2020-7-10 13:31:51] layer "RedTriangle.png": Duplicate path: RedTriangle.png
+[2020-7-10 13:31:51] layer "RedTriangle.png": Duplicate path: RedTriangle.png

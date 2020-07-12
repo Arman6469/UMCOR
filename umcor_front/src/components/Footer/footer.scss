@@ -1,0 +1,17 @@
+.mt-28 {
+  margin-top: 28vh;
+}
+.footer {
+  height: 42vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer_red_triangle {
+  width: 0.1vw;
+  height: 0.7vh;
+  border-left: 0.9vw solid transparent;
+  border-right: 0.9vw solid transparent;
+  border-top: 0.9vw solid #ca3b17;
+}

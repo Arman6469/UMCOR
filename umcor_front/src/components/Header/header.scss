@@ -1,0 +1,68 @@
+.height-12 {
+  height: 14vh;
+}
+.width-13 {
+  width: 13vw;
+}
+.width-15 {
+  width: 15vw;
+}
+
+
+.pt-24 {
+  padding-top: 4vh;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+.navigation {
+    width: 85vw;
+    display: flex;
+    align-items: center;
+  ul {
+    padding: 0;
+    width: 75%;
+    padding-left: 2vw;
+
+    li {
+      list-style: none;
+      font-size: 1.2vw;
+      font-weight: 500;
+      padding: 0.4vw;
+      transition: 0.4s;
+      text-transform: uppercase;
+      color: #ffffff;
+      font-family: boko-regular;
+      &:hover {
+        font-weight: 700;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+%languages {
+  font-size: 1.2vw;
+  color: #ffffff;
+  font-family: boko-regular;
+}
+
+.armenian {
+  @extend %languages;
+  border-right: 2px solid white;
+  margin-right: 0.5vw;
+  padding-right: 0.5vw;
+  margin-left: 2vw;
+  
+}
+.english{
+    @extend %languages
+}
+
+.red_line{
+    position: absolute;
+    width: 70vw;
+    top: 12%;
+    left: 18%;
+    transform: translateY(-20%);
+}
