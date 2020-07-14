@@ -66,7 +66,7 @@ export default function HomePage() {
         </div>
       </section>
       <div className="home_news_title">
-        <h3 className="font-large upper">Նորություններ</h3>
+        <h3 className="font-large upper font-bl">Նորություններ</h3>
         <div className="news_red_line">
           <img src={red_line} alt="redLine" />
         </div>

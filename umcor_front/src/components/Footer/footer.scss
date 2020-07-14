@@ -1,12 +1,34 @@
 .mt-28 {
   margin-top: 28vh;
 }
+.mt-7{
+  margin-top: 7vh;
+}
+.w-4{
+  width: 2.5vw;
+}
 .footer {
   height: 42vh;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  background-color: #252525;
+}
+.red{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: -3%;
+  
+
+}
+.footer_red_line{
+  width: 60vw;
+  height: 1.5vh;
+  background-color: #ca3b17;  
+  border-radius: 1vw;
 }
 .footer_red_triangle {
   width: 0.1vw;
