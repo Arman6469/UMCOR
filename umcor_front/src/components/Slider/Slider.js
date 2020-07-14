@@ -1,7 +1,8 @@
 import React from "react";
 import "./slider.scss";
-import yellow_line from "../../assets/YellowLineHort.png";
-import yellow_triangle from "../../assets/YellowTriangle.png";
+import Line from "../../components/Line/Line";
+import variables from "../../style/_variables.scss";
+import Triangle from "../../components/Triangle/Triangle";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -24,7 +25,7 @@ export default function Slider({ sliderImages }) {
   };
 
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       <div className="slider">
         {sliderImages.map((image, index) => {
           return (
@@ -35,8 +36,9 @@ export default function Slider({ sliderImages }) {
             >
               <img
                 src={image}
+                className="fit-img"
                 alt="slider-i"
-                style={{ width: "100%", height: "auto" }}
+                style={{ width: "100%", height: "auto", objectFit: "cover" }}
               />
             </div>
           );
@@ -49,11 +51,30 @@ export default function Slider({ sliderImages }) {
           <FontAwesomeIcon icon={faChevronRight} />
         </div>
       </div>
-      <div className="yellow_line">
-        <img src={yellow_line} alt="line" width="100%" />
-      </div>
-      <div className="yellow_triangle">
-        <img src={yellow_triangle} alt="triangle" width="100%" />
+      <div className="slide_bottom_line">
+        <Triangle
+          style={{
+            position: "absolute",
+            top: "97.1%",
+            left: "50%",
+            backgroundColor: variables.yellowcolor,
+            transform: "translateX(-50%)",
+            zIndex: 4,
+          }}
+        />
+
+        <Line
+          style={{
+            position: "absolute",
+            width: "50vw",
+            height: "0.8vw",
+            top: "99%",
+            left: "50%",
+            backgroundColor: variables.yellowcolor,
+            transform: "translateX(-50%)",
+            zIndex: 4,
+          }}
+        />
       </div>
     </div>
   );

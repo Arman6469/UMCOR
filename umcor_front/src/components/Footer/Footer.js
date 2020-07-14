@@ -4,13 +4,28 @@ import insta from "../../assets/Insta.png";
 import gmail from "../../assets/G.png";
 import youtube from "../../assets/Youtube.png";
 import facebook from "../../assets/FB.png";
+import Line from "../../components/Line/Line";
+import variables from "../../style/_variables.scss";
+
+import Triangle from "../../components/Triangle/Triangle";
 
 export default function Footer() {
   return (
-    <div className="footer mt-28">
+    <div className="footer mt-12">
       <div className="red">
-        <div className="footer_red_line"></div>
-        <div className="footer_red_triangle"></div>
+        <Line
+          style={{
+            width: "60vw",
+            height: "0.7vw",
+            backgroundColor: variables.redcolor,
+            borderRadius: "1vw",
+          }}
+        />
+        <Triangle style={{
+          backgroundColor:variables.redcolor,
+          transform: "rotateX(180deg)",
+          marginTop: "-0.05vw"
+        }} />
       </div>
       <div className="jscac mt-7 ">
         <div className="w-4 p-05">
@@ -28,9 +43,7 @@ export default function Footer() {
       </div>
 
       <div className="jscac mt-7">
-          <div className="footer_contact_us flex-column">
-                
-          </div>
+        <div className="footer_contact_us flex-column"></div>
       </div>
     </div>
   );

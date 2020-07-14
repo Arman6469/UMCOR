@@ -1,7 +1,7 @@
 .slider {
   width: 100vw;
   position: relative;
-  height: 83.7vh;
+  height: 45.5vw;
   margin: 0;
   padding: 0;
   display: flex;
@@ -40,20 +40,15 @@
   right: 0;
 }
 
-.yellow_line {
-  position: absolute;
-  width: 50vw;
-  height: 2vh;
-  top: 97%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 4;
-}
-.yellow_triangle {
-  position: absolute;
-  width: 3vw;
-  top: 95%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 4;
+
+.slider_bottom_line{
+  position: absolute ;
+  width: 100vw;
+  height: 43.5vw ;
+ 
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 }

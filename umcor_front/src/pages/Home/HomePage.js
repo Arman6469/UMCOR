@@ -1,14 +1,15 @@
 import React from "react";
 import "./homepage.scss";
 import Slider from "../../components/Slider/Slider";
-import red_line from "../../assets/RedLine.png";
-import red_triangle from "../../assets/RedTriangle.png";
 import NewsCard from "../../components/NewsCard/NewsCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSortUp } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../../components/Footer/Footer";
 import img1 from "../../assets/1.jpg";
+import variables from "../../style/_variables.scss";
 import img2 from "../../assets/2.jpg";
+import Line from "../../components/Line/Line";
+import Triangle from "../../components/Triangle/Triangle";
 
 const sliderImages = [img1, img2];
 const news = [
@@ -36,12 +37,30 @@ export default function HomePage() {
         <p className="font-large font-black upper">
           «Ամքոր» Հայաստան հիմնադրամ
         </p>
-        <div className="home_red_line">
-          <img src={red_line} alt="redLine" />
-        </div>
-        <div className="home_red_triangle">
-          <img src={red_triangle} alt="triangle" width="100%" />
-        </div>
+        <Line
+          style={{
+            width: "29vw",
+            height: "0.7vw",
+            overflow: "hidden",
+            borderRadius: "1vw",
+            marginTop: "2vh",
+            backgroundColor: variables.redcolor,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        />
+        <Triangle
+          style={{
+            width: "2vw",
+            height: "1vw",
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "-0.1vw",
+            backgroundColor: variables.redcolor,
+            transform: "rotateX(180deg)",
+          }}
+        />
 
         <div className="information_umcor">
           <p className="font-medium font-bl">
@@ -67,9 +86,18 @@ export default function HomePage() {
       </section>
       <div className="home_news_title">
         <h3 className="font-large upper font-bl">Նորություններ</h3>
-        <div className="news_red_line">
-          <img src={red_line} alt="redLine" />
-        </div>
+        <Line
+          style={{
+            width: "12vw",
+            height: "0.6vw",
+            overflow: "hidden",
+            borderRadius: "1vw",
+            display: "flex",
+            backgroundColor: variables.redcolor,
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        />
       </div>
       <section className="flex-column mt-5 pos-relative">
         <div className="jsb" style={{ width: "56vw" }}>
@@ -77,7 +105,7 @@ export default function HomePage() {
             return <NewsCard elem={elem} key={index} />;
           })}
         </div>
-        <div className="news_seemore upper font-m font-bl font-white">
+        <div className="news_seemore upper font-m font-bl font-white mt-10">
           Տեսնել բոլորը <FontAwesomeIcon icon={faSortUp} rotation={90} />
         </div>
       </section>

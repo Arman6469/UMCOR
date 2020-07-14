@@ -1,3 +1,5 @@
+@import "../../style/variables";
+
 .welcome {
   width: 100vw;
   display: flex;
@@ -5,23 +7,7 @@
   flex-direction: column;
   padding-top: 5vh;
 }
-.home_red_line {
-  width: 29vw;
-  height: 1.4vh;
-  overflow: hidden;
-  border-radius: 1vw;
-  margin-top: 2vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.home_red_triangle {
-  width: 2vw;
-  display: flex;
-  justify-content: center;
-  margin-top: -0.35vh;
-  transform: rotateX(180deg);
-}
+
 .information_umcor {
   width: 54vw;
   margin-top: 5vh;
@@ -42,18 +28,20 @@
   height: 1.4vh;
   overflow: hidden;
   border-radius: 1vw;
- 
+
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-
-.news_seemore{
-    padding: 0.8vw;
-    background-color: #eac601;
-    border-radius: 0.6vw;
-    position: absolute;
-    top: 50vh;
-
+.news_seemore {
+  padding: 0.8vw;
+  background-color: $yellow;
+  border-radius: 0.6vw;
+  transition: all 0.4s;
+  &:hover{
+    background-color: $blue;
+    transition: all 0.4s;
+    cursor: pointer;
+  }
 }

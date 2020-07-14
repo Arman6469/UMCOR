@@ -80,6 +80,8 @@
   font-family: boko-regular-italic;
 }
 
+
+
 .jscac {
   display: flex;
   justify-content: center;
@@ -155,4 +157,7 @@
 }
 .p-1{
   padding: 1vw;
+}
+.fit-img {
+  object-fit: cover;
 }
