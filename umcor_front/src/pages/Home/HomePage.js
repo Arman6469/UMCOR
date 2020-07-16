@@ -7,11 +7,10 @@ import { faSortUp } from "@fortawesome/free-solid-svg-icons";
 import Footer from "../../components/Footer/Footer";
 import img1 from "../../assets/1.jpg";
 import variables from "../../style/_variables.scss";
-import img2 from "../../assets/2.jpg";
 import Line from "../../components/Line/Line";
 import Triangle from "../../components/Triangle/Triangle";
+import DashedText from "../../components/DashedText/DashedText";
 
-const sliderImages = [img1, img2];
 const news = [
   {
     img: img1,
@@ -30,8 +29,6 @@ const news = [
 export default function HomePage() {
   return (
     <div>
-      <Slider sliderImages={sliderImages} />
-
       <section className="welcome">
         <h2 className="font-h1 font-black font-br upper">Բարի գալուստ</h2>
         <p className="font-large font-black upper">
@@ -62,7 +59,13 @@ export default function HomePage() {
           }}
         />
 
-        <div className="information_umcor">
+        <DashedText
+          style={{
+            width: "54vw",
+            marginTop: "5vh",
+            padding: "1vw",
+          }}
+        >
           <p className="font-medium font-bl">
             {" "}
             «ԱՄՔՈՐ» կազմակերպությունը Հայաստանում գոծունեություն է ծավալում 1994
@@ -81,8 +84,8 @@ export default function HomePage() {
             Կազմակերպության կողմից իրականացված բոլոր ծրագրերն ուղղված են
             բնակչության խոցելի խավերի իրավիճակի բարելավմանը. այդպիսի ծրագրերի
             շարքին են դասվում թրաֆիքինգի դեմ պայքարի,
-          </p>
-        </div>
+          </p>{" "}
+        </DashedText>
       </section>
       <div className="home_news_title">
         <h3 className="font-large upper font-bl">Նորություններ</h3>
@@ -109,8 +112,6 @@ export default function HomePage() {
           Տեսնել բոլորը <FontAwesomeIcon icon={faSortUp} rotation={90} />
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }

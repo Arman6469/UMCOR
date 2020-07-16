@@ -5,7 +5,7 @@ import search from "../../assets/Search.png";
 import Line from "../../components/Line/Line";
 import variables from "../../style/_variables.scss";
 import Triangle from "../Triangle/Triangle";
-
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -15,13 +15,33 @@ export default function Header() {
       </div>
       <div className="navigation bg-black height-100 ">
         <ul>
-          <li className="font-bb">Գլխավոր</li>
-          <li>Մեր Մասին</li>
+          <NavLink to="/"><li className="font-bb">Գլխավոր</li></NavLink>
+          <li>
+            Մեր Մասին{" "}
+            <div className="about_us_dropdown">
+              <NavLink to="/history">
+                <p className="about_dropdown_text">Պատմություն</p>
+              </NavLink>
+              <NavLink to="/mission">
+                <p className="about_dropdown_text">Առաքելություն</p>
+              </NavLink>
+              <NavLink to="/strategy">
+                <p className="about_dropdown_text">Ռազմավարություն</p>
+              </NavLink>
+              <NavLink to="/partners">
+                <p className="about_dropdown_text">Գործընկերներ</p>
+              </NavLink>
+              <NavLink to="/staff">
+                <p className="about_dropdown_text">Աշխատակազմ</p>
+              </NavLink>
+            </div>
+          </li>
           <li>Ծրագրեր</li>
           <li>Նորություններ</li>
           <li>Պատկերասրահ</li>
           <li>Նվիրատվություն</li>
           <li>Կապ</li>
+
           <div className="moving_triangle">
             <Triangle
               style={{
@@ -31,16 +51,16 @@ export default function Header() {
             />
           </div>
           <Line
-        style={{
-          width: "70vw",
-          height: "1.4vh",
-          backgroundColor: "#ca3b17",
-          top: "91.5%",
-          left: "3%",
-          transform: "translateY(-24%)",
-          position: "absolute",
-        }}
-      />
+            style={{
+              width: "70vw",
+              height: "1.4vh",
+              backgroundColor: "#ca3b17",
+              top: "91.5%",
+              left: "3%",
+              transform: "translateY(-24%)",
+              position: "absolute",
+            }}
+          />
         </ul>
         <div className="languages jscac">
           <div className="armenian">Հայ</div>
@@ -57,8 +77,6 @@ export default function Header() {
           <img src={search} alt="search" width="100%" />
         </div>
       </div>
-
-      
     </nav>
   );
 }

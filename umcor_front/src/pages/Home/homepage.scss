@@ -5,16 +5,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-top: 5vh;
-}
-
-.information_umcor {
-  width: 54vw;
-  margin-top: 5vh;
-  padding: 1vw;
-  text-align: center;
-  letter-spacing: 0.07em;
-  border: 0.3vw dashed #eac601;
+  padding-top: 2.5vw;
 }
 
 .home_news_title {
@@ -39,7 +30,7 @@
   background-color: $yellow;
   border-radius: 0.6vw;
   transition: all 0.4s;
-  &:hover{
+  &:hover {
     background-color: $blue;
     transition: all 0.4s;
     cursor: pointer;
