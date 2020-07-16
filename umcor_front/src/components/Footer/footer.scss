@@ -1,39 +1,61 @@
 .mt-12 {
-  margin-top: 12vh;
+  margin-top: 6vw;
 }
-.mt-7{
-  margin-top: 7vh;
+.mt-7 {
+  margin-top: 3vw;
 }
-.w-4{
+.mb{
+margin-bottom: 0.2vw;
+}
+.mb-3{
+  margin-bottom: 3vw;
+}
+.w-10{
+  width: 9%;
+}
+.w-80{
+  width: 87%;
+}
+.w-4 {
   width: 2.5vw;
 }
 .footer {
-  height: 42vh;
+  // height: 42vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
   background-color: #252525;
 }
-.red{
+.footer_main_part{
+  display: flex;
+  width: 100%;
+  padding-top: 3vw;
+  height: 20vw;
+}
+.red {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: absolute;
-  top: -3%;
-  
+  top: -2%;
+}
 
+.footer_contact_us {
+  width: 50%;
+  padding-left: 11%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-.footer_red_line{
-  width: 60vw;
-  height: 1.5vh;
-  background-color: #ca3b17;  
-  border-radius: 1vw;
+
+.contact_info{
+  width: 65%;
+  padding: 0.3vw;
+  display: flex;
+  justify-content: space-between;
 }
-.footer_red_triangle {
-  width: 0.1vw;
-  height: 0.7vh;
-  border-left: 0.9vw solid transparent;
-  border-right: 0.9vw solid transparent;
-  border-top: 0.9vw solid #ca3b17;
+.footer_map{
+  width: 50%;
+  height: 100%;
 }

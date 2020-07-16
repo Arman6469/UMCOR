@@ -81,7 +81,10 @@
 }
 
 
-
+.jsc{
+  display: flex;
+  justify-content: center;
+}
 .jscac {
   display: flex;
   justify-content: center;
@@ -140,16 +143,16 @@
 }
 
 .mt-1{
-  margin-top: 1vh;
+  margin-top: 0.5vw;
 }
 .mt-2{
-  margin-top: 2vh;
+  margin-top: 1vw;
 }
 .mt-5{
-  margin-top: 5vh;
+  margin-top: 2.5vw;
 }
 .mt-10{
-  margin-top: 10vh;
+  margin-top: 5vw;
 }
 
 .p-05{
@@ -158,6 +161,8 @@
 .p-1{
   padding: 1vw;
 }
-.fit-img {
-  object-fit: cover;
+
+
+.letter-spacing-007{
+  letter-spacing: 0.07vw;
 }
