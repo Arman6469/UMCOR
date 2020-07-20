@@ -1,0 +1,17 @@
+.staff_single_card {
+  width: 31%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0.7vw;
+  margin-top: 2vw;
+  
+}
+.staff_single_image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}

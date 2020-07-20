@@ -1,11 +1,11 @@
 import React from "react";
 import AboutPage from "../../../components/AboutPage/AboutPage";
-import img1 from '../../../assets/1.jpg'
+import img2 from "../../../assets/2.jpg";
 
-export default function StrategyPage() {
+export default function MissionPage() {
   return (
     <div>
-      <AboutPage title={"Մեր Ռազմավարությունը"} img={img1}>
+      <AboutPage title={"Մեր Առաքելությունը"} img={img2}>
         <p className="font-medium font-bl">
           «ԱՄՔՈՐ» կազմակերպությունը Հայաստանում գոծունեություն է ծավալում 1994
           թվականից: Այս տարիների ընթացքում օգնության և զարգացման ծրագրեր են

@@ -1,10 +1,8 @@
 import React from "react";
 import "./homepage.scss";
-import Slider from "../../components/Slider/Slider";
 import NewsCard from "../../components/NewsCard/NewsCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSortUp } from "@fortawesome/free-solid-svg-icons";
-import Footer from "../../components/Footer/Footer";
 import img1 from "../../assets/1.jpg";
 import variables from "../../style/_variables.scss";
 import Line from "../../components/Line/Line";

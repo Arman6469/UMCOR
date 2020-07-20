@@ -4,14 +4,14 @@ import './aboutpage.scss'
 import Triangle from "../Triangle/Triangle";
 import variables from "../../style/_variables.scss";
 import DashedText from "../../components/DashedText/DashedText";
-import img1 from "../../assets/1.jpg";
 
-export default function AboutPage({ children, ...props }) {
+
+export default function AboutPage({ children, title, img }) {
   return (
     <div>
       <div className="flex-column width-100 padding-t-25">
         <h1 className="font-h1 font-black font-br upper">
-          Մեր Ռազմավարությունը
+         {title}
         </h1>
         <Line
           style={{
@@ -40,7 +40,7 @@ export default function AboutPage({ children, ...props }) {
         <DashedText
           style={{
             width: "54vw",
-            marginTop: "5vh",
+            marginTop: "2.5vw",
             padding: "1vw",
           }}
         >
@@ -59,7 +59,7 @@ export default function AboutPage({ children, ...props }) {
               transform: "translateX(-50%)",
             }}
           />
-          <img src={img1} alt="about_image" width="100%" />
+          <img src={img} alt="about_image" width="100%" />
         </div>
       </div>
     </div>
