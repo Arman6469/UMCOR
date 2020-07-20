@@ -10,6 +10,7 @@ const StrategyPage = lazy(() => import("../pages/About/Strategy/StrategyPage"));
 const MissionPage = lazy(() => import("../pages/About/Mission/MissionPage"));
 const HistoryPage = lazy(() => import("../pages/About/History/HistoryPage"));
 const StaffPage = lazy(() => import("../pages/About/Staff/StaffPage"));
+const PartnersPage = lazy(() => import("../pages/About/Partners/PartnersPage"));
 
 const sliderImages = [img1, img2];
 
@@ -39,6 +40,11 @@ export default function AppRouter() {
         <Route path="/staff">
           <Suspense fallback={<></>}>
             <StaffPage />
+          </Suspense>
+        </Route>
+        <Route path="/partners">
+          <Suspense fallback={<></>}>
+            <PartnersPage />
           </Suspense>
         </Route>
       </Switch>

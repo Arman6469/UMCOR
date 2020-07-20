@@ -1,25 +1,26 @@
-import React from "react";
+import React, { useMemo } from "react";
 import Line from "../../../components/Line/Line";
 import Triangle from "../../../components/Triangle/Triangle";
 import variables from "../../../style/_variables.scss";
-import './staffpage.scss';
-import img from '../../../assets/1.jpg'
+import "./staffpage.scss";
+import img from "../../../assets/1.jpg";
 import StaffCard from "../../../components/StaffCard/StaffCard";
 
-
 const staff = [
-  {image: img, name: "Անուն" , lastname: "Ազգանուն", position: "Պաշտոն"},
-  {image: img, name: "Անուն" , lastname: "Ազգանուն", position: "Պաշտոն"},
-  {image: img, name: "Անուն" , lastname: "Ազգանուն", position: "Պաշտոն"},
-  {image: img, name: "Անուն" , lastname: "Ազգանուն", position: "Պաշտոն"},
-  {image: img, name: "Անուն" , lastname: "Ազգանուն", position: "Պաշտոն"},
-  {image: img, name: "Անուն" , lastname: "Ազգանուն", position: "Պաշտոն"},
-  {image: img, name: "Անուն" , lastname: "Ազգանուն", position: "Պաշտոն"},
-  {image: img, name: "Անուն" , lastname: "Ազգանուն", position: "Պաշտոն"},
-  {image: img, name: "Անուն" , lastname: "Ազգանուն", position: "Պաշտոն"},
-]
+  { image: img, name: "Անուն", lastname: "Ազգանուն", position: "Պաշտոն" },
+  { image: img, name: "Անուն", lastname: "Ազգանուն", position: "Պաշտոն" },
+  { image: img, name: "Անուն", lastname: "Ազգանուն", position: "Պաշտոն" },
+  { image: img, name: "Անուն", lastname: "Ազգանուն", position: "Պաշտոն" },
+  { image: img, name: "Անուն", lastname: "Ազգանուն", position: "Պաշտոն" },
+  { image: img, name: "Անուն", lastname: "Ազգանուն", position: "Պաշտոն" },
+  { image: img, name: "Անուն", lastname: "Ազգանուն", position: "Պաշտոն" },
+  { image: img, name: "Անուն", lastname: "Ազգանուն", position: "Պաշտոն" },
+  { image: img, name: "Անուն", lastname: "Ազգանուն", position: "Պաշտոն" },  
+];
 
 export default function StaffPage() {
+  
+
   return (
     <div>
       <div className="flex-column width-100 padding-t-25">
@@ -50,7 +51,9 @@ export default function StaffPage() {
         />
 
         <div className="staff_cards">
-            {staff.map((employee, index) => <StaffCard key={index} employee={employee}  />)}
+          {staff.map((employee, index) => (
+            <StaffCard key={index} employee={employee} />
+          ))}
         </div>
       </div>
     </div>

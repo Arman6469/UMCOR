@@ -55,7 +55,7 @@ export default function Slider({ sliderImages }) {
         <Triangle
           style={{
             position: "absolute",
-            top: "97.1%",
+            top: "96%",
             left: "50%",
             backgroundColor: variables.yellowcolor,
             transform: "translateX(-50%)",

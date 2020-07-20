@@ -37,7 +37,7 @@
       align-items: center;
       font-weight: 500;
       height: 100%;
-      padding: 0 0 0 1vw;
+      padding-left: 3vw;
       text-transform: uppercase;
       transition: all 0.3s !important;
       color: $white;
@@ -72,34 +72,34 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 77%;
+  top: 74%;
   left: 6%;
   display: none;
   transition: all 0.3s !important;
 }
 
-ul li:first-child:hover ~ .moving_triangle {
+ul li:nth-child(1) ~ .moving_triangle {
   left: 6%;
   display: flex;
 }
 ul li:nth-child(2):hover ~ .moving_triangle {
-  left: 15.5%;
+  left: 19.5%;
   display: flex;
 }
 ul li:nth-child(3):hover ~ .moving_triangle {
-  left: 24.5%;
+  left: 31%;
   display: flex;
 }
 ul li:nth-child(4):hover ~ .moving_triangle {
   display: flex;
-  left: 35%;
+  left: 44.5%;
 }
 ul li:nth-child(5):hover ~ .moving_triangle {
   display: flex;
-  left: 48.5%;
+  left: 61%;
 }
 ul li:nth-child(6):hover ~ .moving_triangle {
-  left: 62%;
+  left: 73.5%;
   display: flex;
 }
 ul li:nth-child(7):hover ~ .moving_triangle {
@@ -120,11 +120,12 @@ ul li:nth-child(7):hover ~ .moving_triangle {
   background-color: $red;
   z-index: 15;
   top: 89%;
-  left: 8%;
+  left: 12.5%;
 }
 
 .about_dropdown_text{
   color: $white;
+  text-transform: capitalize;
   font-size: 1.15vw;
   margin: 0;
   margin-bottom: 0.2vw;
@@ -141,6 +142,6 @@ ul li:nth-child(2):hover .about_us_dropdown{
 .about_dropdown_text:hover{
   cursor: pointer;
   font-family: boko-regular;
-  text-decoration: underline;
+ 
  
 }

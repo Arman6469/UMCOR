@@ -15,7 +15,9 @@ export default function Header() {
       </div>
       <div className="navigation bg-black height-100 ">
         <ul>
-          <NavLink to="/"><li className="font-bb">Գլխավոր</li></NavLink>
+          <NavLink to="/">
+            <li className="font-bb">Գլխավոր</li>
+          </NavLink>
           <li>
             Մեր Մասին{" "}
             <div className="about_us_dropdown">
@@ -38,7 +40,6 @@ export default function Header() {
           </li>
           <li>Ծրագրեր</li>
           <li>Նորություններ</li>
-          <li>Պատկերասրահ</li>
           <li>Նվիրատվություն</li>
           <li>Կապ</li>
 
