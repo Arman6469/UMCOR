@@ -1,30 +1,39 @@
-import React from "react";
+import React, { useMemo, useState } from "react";
 import Line from "../../../components/Line/Line";
 import Triangle from "../../../components/Triangle/Triangle";
 import variables from "../../../style/_variables.scss";
 import DashedText from "../../../components/DashedText/DashedText";
 import logo from "../../../assets/2.jpg";
+import PartnerCard from "../../../components/PartnerCard/PartnerCard";
 
 const partners = [
-  logo,
-  logo,
-  logo,
-  logo,
-  logo,
-  logo,
-  logo,
-  logo,
-  logo,
-  logo,
-  logo,
-  logo,
-  logo,
-  logo,
-  logo,
-  logo,
+  { logo: logo, title: "Boloki" },
+  { logo: logo, title: "Boloki" },
+  { logo: logo, title: "Boloki" },
+  { logo: logo, title: "Boloki" },
+  { logo: logo, title: "Boloki" },
+  { logo: logo, title: "Boloki" },
+  { logo: logo, title: "Boloki" },
+  { logo: logo, title: "Boloki" },
+  { logo: logo, title: "Boloki" },
+  { logo: logo, title: "Boloki" },
+  { logo: logo, title: "Boloki" },
+  { logo: logo, title: "Boloki" },
+  { logo: logo, title: "Boloki" },
+  { logo: logo, title: "Boloki" },
+  { logo: logo, title: "Boloki" },
 ];
 
 export default function PartnersPage() {
+  const [elemInRow, setElemInRow] = useState(5);
+  const customizedPartners = useMemo(() => {
+    return partners.reduce((acc, employee, idx) => {
+      if (idx % elemInRow === 0) acc.push([]);
+      acc[acc.length - 1].push(employee);
+      return acc;
+    }, []);
+  }, [partners, elemInRow]);
+
   return (
     <div className="flex-column width-100 padding-t-25">
       <h1 className="font-h1 font-black font-br upper">Մեր Գործընկերները</h1>
@@ -48,11 +57,32 @@ export default function PartnersPage() {
           display: "flex",
           justifyContent: "center",
           marginTop: "-0.1vw",
+          marginBottom: "7vw",
           backgroundColor: variables.redcolor,
           transform: "rotateX(180deg)",
         }}
       />
-      <DashedText></DashedText>
+
+      {customizedPartners.map((array, index) => {
+        return (
+          <DashedText
+            key={index}
+            style={{
+              display: "flex",
+              width: "57vw",
+              marginBottom: "2vw",
+            }}
+          >
+            {array.map((elem, i) => {
+              return (
+                <div key={i} className="partners_row">
+                  <PartnerCard logo={elem.logo} title={elem.title} />
+                </div>
+              );
+            })}
+          </DashedText>
+        );
+      })}
     </div>
   );
 }

@@ -78,8 +78,8 @@
   transition: all 0.3s !important;
 }
 
-ul li:nth-child(1) ~ .moving_triangle {
-  left: 6%;
+ul li:first-child ~ .moving_triangle {
+  left: 8.5%;
   display: flex;
 }
 ul li:nth-child(2):hover ~ .moving_triangle {
@@ -87,7 +87,7 @@ ul li:nth-child(2):hover ~ .moving_triangle {
   display: flex;
 }
 ul li:nth-child(3):hover ~ .moving_triangle {
-  left: 31%;
+  left: 31.5%;
   display: flex;
 }
 ul li:nth-child(4):hover ~ .moving_triangle {
@@ -101,10 +101,6 @@ ul li:nth-child(5):hover ~ .moving_triangle {
 ul li:nth-child(6):hover ~ .moving_triangle {
   left: 73.5%;
   display: flex;
-}
-ul li:nth-child(7):hover ~ .moving_triangle {
-  display: flex;
-  left: 71.9%;
 }
 
 
@@ -133,6 +129,10 @@ ul li:nth-child(7):hover ~ .moving_triangle {
 }
 a{
   text-decoration: none;
+
+}
+a:visited{
+  color: inherit;
 }
 
 ul li:nth-child(2):hover .about_us_dropdown{

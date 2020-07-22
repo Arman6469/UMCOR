@@ -15,12 +15,10 @@ const staff = [
   { image: img, name: "Անուն", lastname: "Ազգանուն", position: "Պաշտոն" },
   { image: img, name: "Անուն", lastname: "Ազգանուն", position: "Պաշտոն" },
   { image: img, name: "Անուն", lastname: "Ազգանուն", position: "Պաշտոն" },
-  { image: img, name: "Անուն", lastname: "Ազգանուն", position: "Պաշտոն" },  
+  { image: img, name: "Անուն", lastname: "Ազգանուն", position: "Պաշտոն" },
 ];
 
 export default function StaffPage() {
-  
-
   return (
     <div>
       <div className="flex-column width-100 padding-t-25">
