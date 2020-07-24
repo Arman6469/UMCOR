@@ -1,22 +1,37 @@
-import React from "react";
+import React, { useState, useMemo } from "react";
 import { useParams } from "react-router-dom";
-import Line from '../../../components/Line/Line'
-import Triangle from '../../../components/Triangle/Triangle'
-import variables from '../../../style/_variables.scss'
+import Line from "../../../components/Line/Line";
+import Triangle from "../../../components/Triangle/Triangle";
+import variables from "../../../style/_variables.scss";
 import AboutProject from "../../../components/AboutProject/AboutProject";
 import { Pagination } from "../../../components/Pagination/Pagination";
 
 const projects = [
-    "Lorem ipsum dolor sit amet consectetur",
-    "Lorem ipsum dolor sit amet consectetur",
-    "Lorem ipsum dolor sit amet consectetur",
-    "Lorem ipsum dolor sit amet consectetur",
-    "Lorem ipsum dolor sit amet consectetur",
-    "Lorem ipsum dolor sit amet consectetur",
-    "Lorem ipsum dolor sit amet consectetur",
-]
+  "Lorem ipsum dolor sit amet consectetur",
+  "Lorem ipsum dolor sit amet consectetur",
+  "Lorem ipsum dolor sit amet consectetur",
+  "Lorem ipsum dolor sit amet consectetur",
+  "Lorem ipsum dolor sit amet consectetur",
+  "Lorem ipsum dolor sit amet consectetur",
+  "Lorem ipsum dolor sit amet consectetur",
+  "Lorem ipsum dolor sit amet consectetur",
+  "Lorem ipsum dolor sit amet consectetur",
+  "Lorem ipsum dolor sit amet consectetur",
+  "Lorem ipsum dolor sit amet consectetur",
+  "Lorem ipsum dolor sit amet consectetur",
+];
 
 export default function ProjectPage() {
+  const [elNumInPage] = useState(11);
+  const [currentPage, setCurrentPage] = useState(1);
+  const productsInPage = useMemo(() => {
+    return projects?.length
+      ? projects.slice(
+          (currentPage - 1) * elNumInPage,
+          elNumInPage * currentPage
+        )
+      : [];
+  }, [projects, elNumInPage, currentPage]);
 
   return (
     <div>
@@ -48,11 +63,14 @@ export default function ProjectPage() {
           }}
         />
 
-        {projects.map((project, index) => {
-            return <AboutProject project={project} key={index} />
+        {productsInPage.map((project, index) => {
+          return <AboutProject project={project} key={index} />;
         })}
 
-        {/* <Pagination />   */}
+        <Pagination
+          length={Math.ceil(projects.length / elNumInPage)}
+          handleChange={(page) => setCurrentPage(page)}
+        />
       </div>
     </div>
   );

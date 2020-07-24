@@ -1,9 +1,8 @@
 import React from "react";
 import "./aboutproject.scss";
-import { useParams, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function AboutProject(props) {
-  console.log(useParams());
   return (
     <Link to={``}>
       <div className="about_project_main">

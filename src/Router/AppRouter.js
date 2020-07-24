@@ -1,5 +1,5 @@
-import React, { lazy, Suspense } from "react";
-import { Switch, Route } from "react-router-dom";
+import React, { lazy, Suspense, useEffect } from "react";
+import { Switch, Route, useLocation } from "react-router-dom";
 import Slider from "../components/Slider/Slider";
 import img1 from "../assets/1.jpg";
 import img2 from "../assets/2.jpg";
@@ -22,6 +22,10 @@ const DonationPage = lazy(() => import("../pages/Donation/DonationPage"));
 const sliderImages = [img1, img2];
 
 export default function AppRouter() {
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [location]);
   return (
     <div>
       <Header />

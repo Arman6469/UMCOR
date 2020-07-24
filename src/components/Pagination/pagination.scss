@@ -1,17 +1,17 @@
 .pagination {
-  user-select: none;
-
+  margin-top: 2vw;
   .pagination-item {
-    height: 1vw;
-    width: 1vw;
-    //   box-shadow: 0 0 1vw 0 rgba($color: $black, $alpha: 0.2);
-
+    height: 2vw;
+    width: 2vw;
+    font-size: 1.4vw;
+    border-radius: 0.3vw;
+    margin: 0.3vw;
     &:hover {
       cursor: pointer;
     }
   }
 
   .border-circle {
-    border-radius: 50%;
+    border-radius: 0.3vw;
   }
 }

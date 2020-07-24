@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "./pagination.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+
 
 export const Pagination = ({ length, handleChange }) => {
   const [active, setActive] = useState(1);
@@ -12,19 +15,19 @@ export const Pagination = ({ length, handleChange }) => {
   return length <= 1 ? (
     " "
   ) : (
-    <div className="d-flex align-center justify-center pagination py-2">
+    <div className="jscac pagination ">
       <div
-        className="pagination-item pa-2 text-bold mr-1 h3 d-flex align-center justify-center border-circle"
+        className="pagination-item font-bb bg-yellow font-white jscac "
         onClick={() => change(active - 1)}
       >
-        <i className="fas fa-chevron-left"></i>
+        <FontAwesomeIcon icon={faChevronLeft} />
       </div>
       {new Array(length).fill(" ").map((a, idx) => {
         return (
           <div
             key={idx}
-            className={`border-circle mr-1 d-flex align-center justify-center pa-2 text-bold pagination-item ${
-              active === idx + 1 ? "bg-orange text-white" : ""
+            className={`border-circle mr-1 jscac pa-2 font-bb pagination-item ${
+              active === idx + 1 ? "bg-blue font-white" : "bg-yellow font-white"
             }`}
             onClick={() => change(idx + 1)}
           >
@@ -33,10 +36,10 @@ export const Pagination = ({ length, handleChange }) => {
         );
       })}
       <div
-        className="pagination-item mr-1 d-flex align-center justify-center pa-2 text-bold border-circle"
+        className="pagination-item jscac font-bb bg-yellow font-white "
         onClick={() => change(active + 1)}
       >
-        <i className="fas fa-chevron-right h3"></i>
+        <FontAwesomeIcon icon={faChevronRight} />
       </div>
     </div>
   );

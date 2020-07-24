@@ -110,7 +110,7 @@ export default function HomePage() {
           })}
         </div>
         <NavLink to="/news">
-          <div className="news_seemore upper font-m font-bl font-white mt-10">
+          <div className="news_seemore upper font-small font-bl font-white mt-10">
             Տեսնել բոլորը <FontAwesomeIcon icon={faSortUp} rotation={90} />
           </div>
         </NavLink>

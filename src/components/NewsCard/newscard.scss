@@ -1,6 +1,6 @@
 .news_card_main_div {
   width: 17vw;
-  height: 40vh;
+  height: 21vw;
   box-sizing: border-box;
   display: flex;
   padding: 0.5vw;
@@ -32,7 +32,7 @@
 }
 .news_card_yellow_triangle {
   width: 2vw;
-  height: 2vh;
+  height: 1vw;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   margin-bottom: -0.1vw;
   background-color: #3352a0;
@@ -40,7 +40,7 @@
 }
 .news_card_yellow_line {
   width: 100%;
-  height: 1vh;
+  height: 0.5vw;
   border-radius: 1vw;
   background-color: #eac601;
   display: flex;

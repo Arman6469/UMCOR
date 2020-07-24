@@ -51,7 +51,13 @@ export default function Header() {
           <li>
             <NavLink to="/donation">Նվիրատվություն</NavLink>
           </li>
-          <li>Կապ</li>
+          <li
+            onClick={() =>
+              window.scrollTo({ top: "10000", behavior: "smooth" })
+            }
+          >
+            Կապ
+          </li>
 
           <div className="moving_triangle">
             <Triangle
