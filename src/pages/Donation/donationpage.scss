@@ -1,0 +1,65 @@
+@import "../../style/variables";
+
+.donation {
+  display: flex;
+  width: 57vw;
+  height: 7.5vw;
+  justify-content: space-between;
+  margin-top: 5vw;
+}
+.donation_input {
+  width: 83%;
+  height: 100%;
+  border: 0.2vw solid $yellow;
+  border-radius: 0.2vw;
+  outline: none;
+  box-sizing: border-box;
+}
+.donation_currency {
+  width: 15%;
+  height: 100%;
+  background-color: $blue;
+  display: flex;
+  border-radius: 0.5vw;
+  padding-left: 1.7vw;
+  outline: none;
+  // justify-content: center;
+  // align-items: center;
+}
+.donation_size {
+  display: flex;
+  width: 57vw;
+  height: 7.5vw;
+  justify-content: space-between;
+  margin-top: 1vw;
+}
+.donation_single_size {
+  width: 15%;
+  height: 100%;
+  border-radius: 0.5vw;
+  background-color: $yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.donation_inputs_title{
+  width: 57vw;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5vw;
+}
+.category_select{
+  border: 0.15vw solid $yellow;
+  margin-top: 2vw ;
+  padding: 0.3vw;
+}
+.donation_submit_button{
+  width: 10vw;
+  height: 2.5vw;
+  background-color: $red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5vw;
+}

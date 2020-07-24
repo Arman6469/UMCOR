@@ -12,7 +12,12 @@ const HistoryPage = lazy(() => import("../pages/About/History/HistoryPage"));
 const StaffPage = lazy(() => import("../pages/About/Staff/StaffPage"));
 const PartnersPage = lazy(() => import("../pages/About/Partners/PartnersPage"));
 const ProjectsPage = lazy(() => import("../pages/Projects/ProjectsPage"));
-const ProjectPage = lazy(() => import("../pages/Projects/ProjectPage/ProjectPage"))
+const ProjectPage = lazy(() =>
+  import("../pages/Projects/ProjectPage/ProjectPage")
+);
+const NewsPage = lazy(() => import("../pages/News/NewsPage"));
+const NewsSinglePage = lazy(() => import("../pages/News/NewsSinglePage"));
+const DonationPage = lazy(() => import("../pages/Donation/DonationPage"));
 
 const sliderImages = [img1, img2];
 
@@ -57,6 +62,21 @@ export default function AppRouter() {
         <Route path="/projects/:id">
           <Suspense fallback={<></>}>
             <ProjectPage />
+          </Suspense>
+        </Route>
+        <Route path="/news" exact>
+          <Suspense fallback={<></>}>
+            <NewsPage />
+          </Suspense>
+        </Route>
+        <Route path="/news/:id">
+          <Suspense fallback={<></>}>
+            <NewsSinglePage />
+          </Suspense>
+        </Route>
+        <Route path="/donation">
+          <Suspense fallback={<></>}>
+            <DonationPage />
           </Suspense>
         </Route>
       </Switch>

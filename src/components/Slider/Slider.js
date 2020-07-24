@@ -3,6 +3,7 @@ import "./slider.scss";
 import Line from "../../components/Line/Line";
 import variables from "../../style/_variables.scss";
 import Triangle from "../../components/Triangle/Triangle";
+import future from '../../assets/Future.png'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -37,7 +38,7 @@ export default function Slider({ sliderImages }) {
               <img
                 src={image}
                 className="fit-img"
-                alt="slider-i"
+                alt="nkar"
                 style={{ width: "100%", height: "auto", objectFit: "cover" }}
               />
             </div>
@@ -51,11 +52,14 @@ export default function Slider({ sliderImages }) {
           <FontAwesomeIcon icon={faChevronRight} />
         </div>
       </div>
+      <div className="future_image">
+        <img src={future} alt="future" width="100%"/>
+      </div>
       <div className="slide_bottom_line">
         <Triangle
           style={{
             position: "absolute",
-            top: "96%",
+            top: "97%",
             left: "50%",
             backgroundColor: variables.yellowcolor,
             transform: "translateX(-50%)",

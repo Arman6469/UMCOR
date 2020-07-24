@@ -14,6 +14,7 @@
   height: 100%;
   position: relative;
   transition: 0.5s;
+  opacity: 0.9;
 }
 
 %btn-styles {
@@ -40,15 +41,23 @@
   right: 0;
 }
 
-
-.slider_bottom_line{
-  position: absolute ;
+.slider_bottom_line {
+  position: absolute;
   width: 100vw;
-  height: 43.5vw ;
- 
+  height: 43.5vw;
+
   z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+}
+
+.future_image {
+  width: 35vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 12;
 }

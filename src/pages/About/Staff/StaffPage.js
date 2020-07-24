@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React from "react";
 import Line from "../../../components/Line/Line";
 import Triangle from "../../../components/Triangle/Triangle";
 import variables from "../../../style/_variables.scss";

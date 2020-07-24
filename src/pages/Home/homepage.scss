@@ -33,6 +33,6 @@
   &:hover {
     background-color: $blue;
     transition: all 0.4s;
-    cursor: pointer;
+    cursor: pointer !important;
   }
 }

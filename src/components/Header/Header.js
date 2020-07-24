@@ -1,11 +1,12 @@
 import React from "react";
 import logo from "../../assets/UMCOR.png";
 import "./header.scss";
-import search from "../../assets/Search.png";
 import Line from "../../components/Line/Line";
 import variables from "../../style/_variables.scss";
 import Triangle from "../Triangle/Triangle";
 import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
   return (
@@ -16,12 +17,11 @@ export default function Header() {
       <div className="navigation bg-black height-100 ">
         <ul>
           <li className="font-bb">
-            {" "}
             <NavLink to="/">Գլխավոր </NavLink>
           </li>
 
           <li>
-            Մեր Մասին{" "}
+            Մեր Մասին
             <div className="about_us_dropdown">
               <NavLink to="/history">
                 <p className="about_dropdown_text">Պատմություն</p>
@@ -42,12 +42,15 @@ export default function Header() {
           </li>
 
           <li>
-            {" "}
             <NavLink to="/projects">Ծրագրեր </NavLink>
           </li>
 
-          <li>Նորություններ</li>
-          <li>Նվիրատվություն</li>
+          <li>
+            <NavLink to="/news">Նորություններ</NavLink>
+          </li>
+          <li>
+            <NavLink to="/donation">Նվիրատվություն</NavLink>
+          </li>
           <li>Կապ</li>
 
           <div className="moving_triangle">
@@ -74,15 +77,9 @@ export default function Header() {
           <div className="armenian">Հայ</div>
           <div className="english">Eng</div>
         </div>
-        <div
-          style={{
-            width: "2.2vw",
-            marginLeft: "1vw",
-            padding: "0.4vw",
-            paddingTop: "2vh",
-          }}
-        >
-          <img src={search} alt="search" width="100%" />
+
+        <div className="search-icon">
+          <FontAwesomeIcon icon={faSearch} />
         </div>
       </div>
     </nav>

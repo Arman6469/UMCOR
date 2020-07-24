@@ -1,0 +1,24 @@
+@import "../../style/variables";
+
+.about_project_main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+        cursor: pointer;
+        .about_project_triangle{
+            display: flex;
+        }
+    }
+}
+
+.about_project_triangle {
+  width: 2vw;
+  height: 2vh;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  margin-bottom: -0.1vw;
+  background-color: $yellow;
+  transform: rotateZ(90deg);
+  display: none;
+}
+

@@ -7,7 +7,7 @@ import Triangle from "../../components/Triangle/Triangle";
 import variables from "../../style/_variables.scss";
 
 const projects = [
-  { image: image, text: "hello" },
+  { image: image, text: "Առողջապահություն" },
   { image: image, text: "boxk" },
   { image: image, text: "boloki" },
   { image: image, text: "xiar" },

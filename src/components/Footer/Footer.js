@@ -1,14 +1,17 @@
 import React from "react";
 import "./footer.scss";
-import insta from "../../assets/Insta.png";
-import gmail from "../../assets/G.png";
-import youtube from "../../assets/Youtube.png";
-import facebook from "../../assets/FB.png";
 import Line from "../../components/Line/Line";
 import variables from "../../style/_variables.scss";
 import Call from "../../assets/Call.png";
 import Mail from "../../assets/Mail.png";
 import Address from "../../assets/Address.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faInstagram,
+  faFacebookF,
+  faGooglePlusG,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
 
 import Triangle from "../../components/Triangle/Triangle";
 
@@ -32,18 +35,18 @@ export default function Footer() {
           }}
         />
       </div>
-      <div className="jscac mt-7 ">
-        <div className="w-4 p-05">
-          <img src={facebook} alt="facebook" width="100%" />
+      <div className="footer_icons">
+        <div className="footer_icon" id="facebook">
+          <FontAwesomeIcon icon={faFacebookF} />
         </div>
-        <div className="w-4 p-05">
-          <img src={gmail} alt="gmail" width="100%" />
+        <div className="footer_icon" id="facebook">
+          <FontAwesomeIcon icon={faGooglePlusG} />
         </div>
-        <div className="w-4 p-05">
-          <img src={youtube} alt="gmail" width="100%" />
+        <div className="footer_icon" id="facebook">
+          <FontAwesomeIcon icon={faYoutube} />
         </div>
-        <div className="w-4 p-05">
-          <img src={insta} alt="gmail" width="100%" />
+        <div className="footer_icon">
+          <FontAwesomeIcon icon={faInstagram} />
         </div>
       </div>
 
@@ -108,7 +111,9 @@ export default function Footer() {
         }}
       />
 
-      <p className="font-white font-small font-bl mt-2 mb-3" >&copy; 2020 Innovation Ethnic Regional Center. All Rights Reserved</p>
+      <p className="font-white font-small font-bl mt-2 mb-3">
+        &copy; 2020 Innovation Ethnic Regional Center. All Rights Reserved
+      </p>
     </div>
   );
 }

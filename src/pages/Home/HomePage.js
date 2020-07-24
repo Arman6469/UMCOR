@@ -1,5 +1,6 @@
 import React from "react";
 import "./homepage.scss";
+import { NavLink } from "react-router-dom";
 import NewsCard from "../../components/NewsCard/NewsCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSortUp } from "@fortawesome/free-solid-svg-icons";
@@ -13,14 +14,17 @@ const news = [
   {
     img: img1,
     value: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa qui",
+    id: 1,
   },
   {
     img: img1,
     value: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa qui",
+    id: 9,
   },
   {
     img: img1,
     value: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa qui",
+    id: 2,
   },
 ];
 
@@ -60,12 +64,11 @@ export default function HomePage() {
         <DashedText
           style={{
             width: "54vw",
-            marginTop: "5vh",
+            marginTop: "2.5vw",
             padding: "1vw",
           }}
         >
           <p className="font-medium font-bl">
-            {" "}
             «ԱՄՔՈՐ» կազմակերպությունը Հայաստանում գոծունեություն է ծավալում 1994
             թվականից: Այս տարիների ընթացքում օգնության և զարգացման ծրագրեր են
             իրականցվել ողջ Հայաստանում: «ԱՄՔՈՐ»-ի առաքելությունն է նպաստել
@@ -82,7 +85,7 @@ export default function HomePage() {
             Կազմակերպության կողմից իրականացված բոլոր ծրագրերն ուղղված են
             բնակչության խոցելի խավերի իրավիճակի բարելավմանը. այդպիսի ծրագրերի
             շարքին են դասվում թրաֆիքինգի դեմ պայքարի,
-          </p>{" "}
+          </p>
         </DashedText>
       </section>
       <div className="home_news_title">
@@ -106,9 +109,11 @@ export default function HomePage() {
             return <NewsCard elem={elem} key={index} />;
           })}
         </div>
-        <div className="news_seemore upper font-m font-bl font-white mt-10">
-          Տեսնել բոլորը <FontAwesomeIcon icon={faSortUp} rotation={90} />
-        </div>
+        <NavLink to="/news">
+          <div className="news_seemore upper font-m font-bl font-white mt-10">
+            Տեսնել բոլորը <FontAwesomeIcon icon={faSortUp} rotation={90} />
+          </div>
+        </NavLink>
       </section>
     </div>
   );

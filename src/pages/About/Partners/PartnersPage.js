@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo } from "react";
 import Line from "../../../components/Line/Line";
 import Triangle from "../../../components/Triangle/Triangle";
 import variables from "../../../style/_variables.scss";
@@ -25,7 +25,7 @@ const partners = [
 ];
 
 export default function PartnersPage() {
-  const [elemInRow, setElemInRow] = useState(5);
+  const elemInRow = 5
   const customizedPartners = useMemo(() => {
     return partners.reduce((acc, employee, idx) => {
       if (idx % elemInRow === 0) acc.push([]);

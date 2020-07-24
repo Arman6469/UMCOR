@@ -1,0 +1,17 @@
+.pagination {
+  user-select: none;
+
+  .pagination-item {
+    height: 1vw;
+    width: 1vw;
+    //   box-shadow: 0 0 1vw 0 rgba($color: $black, $alpha: 0.2);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .border-circle {
+    border-radius: 50%;
+  }
+}

@@ -1,3 +1,6 @@
+@import '../../style/variables';
+
+
 .mt-12 {
   margin-top: 6vw;
 }
@@ -59,4 +62,26 @@ margin-bottom: 0.2vw;
 .footer_map{
   width: 50%;
   height: 100%;
+}
+.footer_icons{
+  display: flex;
+  width: 13vw;
+  margin-top: 3.5vw;
+  justify-content: space-evenly;
+}
+.footer_icon{
+  width: 2vw;
+  height: 2vw;
+  font-size: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2vw;
+  
+  background-color: $red;
+  border-radius: 0.3vw;
+  color: $white;
+}
+#facebook{
+  font-size: 1.5vw;
 }
