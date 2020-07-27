@@ -1,4 +1,10 @@
-import React from "react";
+import React, {
+  useState,
+  useMemo,
+  useRef,
+  useCallback,
+  useEffect,
+} from "react";
 import "./slider.scss";
 import Line from "../../components/Line/Line";
 import variables from "../../style/_variables.scss";
@@ -10,30 +16,35 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+import Dot from "../Dot/Dot";
 
 export default function Slider({ sliderImages }) {
-  const [position, setPosition] = React.useState(0);
+  const S = useRef();
+  const swap = useCallback(
+    (num) => {
+      sliderImages?.length &&
+        setActiveElem(
+          (aImg) => (aImg + num + sliderImages?.length) % sliderImages?.length
+        );
+      clearInterval(S.current);
+      S.current = setInterval(() => swap(1), 4000);
+    },
+    [sliderImages]
+  );
 
-  const sliderTimer = () => {
-    position === -100 * (sliderImages.length - 1)
-      ? setPosition(0)
-      : setPosition(position - 100);
-  };
-
-  const timeout = setTimeout(sliderTimer, 3000);
+  const [activeElem, setActiveElem] = useState(0);
+  const position = useMemo(() => activeElem * -100, [activeElem]);
 
   const goRight = () => {
-    clearTimeout(timeout);
-    position === -100 * (sliderImages.length - 1)
-      ? setPosition(0)
-      : setPosition(position - 100);
+    swap(1);
   };
   const goLeft = () => {
-    clearTimeout(timeout);
-    position === 0
-      ? setPosition(-100 * (sliderImages.length - 1))
-      : setPosition(position + 100);
+    swap(-1);
   };
+  useEffect(() => {
+    S.current = setInterval(() => swap(1), 4000);
+    return () => clearInterval(S.current);
+  }, [swap]);
 
   return (
     <div style={{ position: "relative" }}>
@@ -46,7 +57,7 @@ export default function Slider({ sliderImages }) {
               style={{ transform: `translateX(${position}%)` }}
             >
               <img
-                src={image}
+                src={image.image}
                 className="fit-img"
                 alt="nkar"
                 style={{ width: "100%", height: "auto", objectFit: "cover" }}
@@ -61,7 +72,24 @@ export default function Slider({ sliderImages }) {
         <div className="slide-button-right" onClick={goRight}>
           <FontAwesomeIcon icon={faChevronRight} />
         </div>
+        <div className="slider_dots">
+          {sliderImages.map((_, index) => {
+            return (
+              <Dot
+                key={index}
+                setActiveElem={(num) => {
+                  clearInterval(S.current);
+                  setActiveElem(num);
+                  S.current = setInterval(() => swap(1), 4000);
+                }}
+                index={index}
+                classes={index === activeElem ? "dot_active" : null}
+              />
+            );
+          })}
+        </div>
       </div>
+
       <div className="future_image">
         <img src={future} alt="future" width="100%" />
       </div>

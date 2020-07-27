@@ -36,7 +36,7 @@ export default function ProjectPage() {
   return (
     <div>
       <div className="flex-column width-100 padding-t-25">
-        <h1 className="font-h1 font-black font-br upper">{useParams().id}</h1>
+        <h1 className="font-h1 font-black font-br upper" id="title">{useParams().id}</h1>
         <Line
           style={{
             width: "29vw",

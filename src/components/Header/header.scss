@@ -150,5 +150,30 @@ ul li:nth-child(2):hover .about_us_dropdown {
 .search-icon {
   font-size: 2vw;
   margin-left: 1vw;
+  width: 2vw;
   color: $yellow;
+  position: relative;
+  display: flex;
+  float: left;
+}
+.search_input {
+  width: 0;
+  box-sizing: border-box;
+  padding-left: 0.2vw;
+  opacity: 0;
+  border: 0;
+  border-bottom: 0.1vw solid $white;
+  color: $white;
+  outline: none;
+
+  background-color: transparent;
+}
+.search_input:focus {
+ width: 8vw;
+  opacity: 1;
+}
+.search-icon:hover .search_input {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+  width: 8vw;
 }

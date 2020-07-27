@@ -1,0 +1,12 @@
+@import "../../style/variables";
+.slider_dot {
+  width: 1.5vw;
+  height: 1.5vw;
+  border-radius: 50%;
+  background-color: $white;
+  &:hover{
+      cursor: pointer;
+      opacity: 0.8;
+      transition: all 0.4s;
+  }
+}

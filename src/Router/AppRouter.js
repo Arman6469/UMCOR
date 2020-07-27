@@ -19,7 +19,11 @@ const NewsPage = lazy(() => import("../pages/News/NewsPage"));
 const NewsSinglePage = lazy(() => import("../pages/News/NewsSinglePage"));
 const DonationPage = lazy(() => import("../pages/Donation/DonationPage"));
 
-const sliderImages = [img1, img2];
+const sliderImages = [
+  {image: img1, id: 0},
+  {image: img2, id: 1},
+  {image: img1, id: 2},
+];
 
 export default function AppRouter() {
   const location = useLocation();

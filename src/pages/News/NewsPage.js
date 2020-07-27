@@ -73,7 +73,7 @@ export default function NewsPage() {
   }, [news, elNumInPage, currentPage]);
   return (
     <div className="flex-column width-100 padding-t-25">
-      <h1 className="font-h1 font-black font-br upper">Նորություններ </h1>
+      <h1 className="font-h1 font-black font-br upper" id="title">Նորություններ </h1>
       <Line
         style={{
           width: "29vw",

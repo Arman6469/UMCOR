@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import logo from "../../assets/UMCOR.png";
 import "./header.scss";
 import Line from "../../components/Line/Line";
@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
+  const [clicked, setClicked] = useState(false)
   return (
     <nav className="height-12 alc">
       <div className="width-13 jscac">
@@ -84,8 +85,10 @@ export default function Header() {
           <div className="english">Eng</div>
         </div>
 
-        <div className="search-icon">
+        <div className="search-icon" onClick={() => setClicked(true)}>
+
           <FontAwesomeIcon icon={faSearch} />
+          <input type="text" className="search_input font-white font-br font-medium"/>
         </div>
       </div>
     </nav>

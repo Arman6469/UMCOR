@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import "./newssinglepage.scss";
 import Line from "../../components/Line/Line";
 import NewsCard from "../../components/NewsCard/NewsCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSortUp } from "@fortawesome/free-solid-svg-icons";
+import {
+  faSortUp,
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 import Triangle from "../../components/Triangle/Triangle";
 import variables from "../../style/_variables.scss";
 import DashedText from "../../components/DashedText/DashedText";
@@ -14,8 +18,8 @@ import { NavLink } from "react-router-dom";
 const carouselImages = [
   { id: 1, image: image1 },
   { id: 2, image: image2 },
-  { id: 1, image: image1 },
-  { id: 2, image: image2 },
+  { id: 3, image: image1 },
+  { id: 4, image: image2 },
 ];
 
 const news = [
@@ -37,7 +41,19 @@ const news = [
 ];
 
 export default function NewsPage() {
-  const [currentSlide, setCurrentSlide] = useState(carouselImages[0].image);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const swap = useCallback(
+    (num) => {
+      carouselImages?.length &&
+        setCurrentSlide(
+          (aImg) =>
+            (aImg + num + carouselImages?.length) % carouselImages?.length
+        );
+    },
+    [carouselImages]
+  );
+
   return (
     <div className="flex-column width-100 padding-t-25">
       <h1 className="font-h1 font-black font-br upper">Նորություններ</h1>
@@ -67,14 +83,20 @@ export default function NewsPage() {
         }}
       />
       <div className="news_page_main_image">
-        <img src={currentSlide} alt="main" width="100%" />
+        <img src={carouselImages[currentSlide].image} alt="main" width="100%" />
+        <div className="slider-button-left" onClick={() => swap(-1)}>
+          <FontAwesomeIcon icon={faChevronLeft} />{" "}
+        </div>
+        <div className="slider-button-right" onClick={() => swap(1)}>
+          <FontAwesomeIcon icon={faChevronRight} />
+        </div>
         <div className="news_slider_images">
           {carouselImages.map((image) => {
             return (
               <div
                 className="news_slider_image"
                 key={image.id}
-                onClick={() => setCurrentSlide(image.image)}
+                onClick={() => setCurrentSlide(image.id)}
               >
                 <img src={image.image} alt={image.id} width="100%" />
               </div>

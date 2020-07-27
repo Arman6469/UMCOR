@@ -22,7 +22,7 @@ const projects = [
 export default function ProjectsPage() {
   return (
     <div className="flex-column width-100 padding-t-25">
-      <h1 className="font-h1 font-black font-br upper">Մեր Ծրագրերը</h1>
+      <h1 className="font-h1 font-black font-br upper" id="title">Մեր Ծրագրերը</h1>
       <Line
         style={{
           width: "29vw",

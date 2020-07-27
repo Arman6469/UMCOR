@@ -1,15 +1,22 @@
 import React, { useState } from "react";
 import "./pagination.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
-
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 export const Pagination = ({ length, handleChange }) => {
+  const ScrollUp = () => {
+    window.scrollTo({ top: "200", behavior: "smooth" });
+  };
+
   const [active, setActive] = useState(1);
   const change = (num) => {
     if (num > length || num < 1) return;
     setActive(num);
     handleChange(num);
+    ScrollUp();
   };
 
   return length <= 1 ? (

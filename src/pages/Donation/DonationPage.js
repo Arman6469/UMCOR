@@ -10,7 +10,7 @@ export default function DonationPage() {
   console.log(currency);
   return (
     <div className="flex-column width-100 padding-t-25">
-      <h1 className="font-h1 font-black font-br upper">Նվիրատվություն</h1>
+      <h1 className="font-h1 font-black font-br upper" id="title">Նվիրատվություն</h1>
       <Line
         style={{
           width: "29vw",

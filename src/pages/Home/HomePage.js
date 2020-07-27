@@ -32,8 +32,8 @@ export default function HomePage() {
   return (
     <div>
       <section className="welcome">
-        <h2 className="font-h1 font-black font-br upper">Բարի գալուստ</h2>
-        <p className="font-large font-black upper">
+        <h2 className="font-h1 font-black font-br upper" id="title">Բարի գալուստ</h2>
+        <p className="font-large font-black upper" >
           «Ամքոր» Հայաստան հիմնադրամ
         </p>
         <Line
