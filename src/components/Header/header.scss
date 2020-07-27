@@ -50,7 +50,7 @@
   }
 }
 
-.active{
+.active {
   font-weight: 700;
 }
 
@@ -77,12 +77,13 @@
   align-items: center;
   position: absolute;
   top: 74%;
-  left: 6%;
+
+  pointer-events: none;
   display: none;
   transition: all 0.3s !important;
 }
 
-ul li:first-child ~ .moving_triangle {
+ul li:first-child:hover ~ .moving_triangle {
   left: 8.5%;
   display: flex;
 }
@@ -146,8 +147,8 @@ ul li:nth-child(2):hover .about_us_dropdown {
   font-family: boko-regular;
 }
 
-.search-icon{
- font-size: 2vw;
- margin-left: 1vw;
- color: $yellow;
+.search-icon {
+  font-size: 2vw;
+  margin-left: 1vw;
+  color: $yellow;
 }

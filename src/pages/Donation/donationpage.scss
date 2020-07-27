@@ -21,10 +21,10 @@
   background-color: $blue;
   display: flex;
   border-radius: 0.5vw;
-  padding-left: 1.7vw;
+
   outline: none;
-  // justify-content: center;
-  // align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 .donation_size {
   display: flex;
@@ -43,18 +43,18 @@
   align-items: center;
 }
 
-.donation_inputs_title{
+.donation_inputs_title {
   width: 57vw;
   display: flex;
   flex-direction: column;
   margin-top: 5vw;
 }
-.category_select{
+.category_select {
   border: 0.15vw solid $yellow;
-  margin-top: 2vw ;
+  margin-top: 2vw;
   padding: 0.3vw;
 }
-.donation_submit_button{
+.donation_submit_button {
   width: 10vw;
   height: 2.5vw;
   background-color: $red;

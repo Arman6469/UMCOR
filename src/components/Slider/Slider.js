@@ -3,7 +3,7 @@ import "./slider.scss";
 import Line from "../../components/Line/Line";
 import variables from "../../style/_variables.scss";
 import Triangle from "../../components/Triangle/Triangle";
-import future from '../../assets/Future.png'
+import future from "../../assets/Future.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -14,12 +14,22 @@ import {
 export default function Slider({ sliderImages }) {
   const [position, setPosition] = React.useState(0);
 
+  const sliderTimer = () => {
+    position === -100 * (sliderImages.length - 1)
+      ? setPosition(0)
+      : setPosition(position - 100);
+  };
+
+  const timeout = setTimeout(sliderTimer, 3000);
+
   const goRight = () => {
+    clearTimeout(timeout);
     position === -100 * (sliderImages.length - 1)
       ? setPosition(0)
       : setPosition(position - 100);
   };
   const goLeft = () => {
+    clearTimeout(timeout);
     position === 0
       ? setPosition(-100 * (sliderImages.length - 1))
       : setPosition(position + 100);
@@ -53,7 +63,7 @@ export default function Slider({ sliderImages }) {
         </div>
       </div>
       <div className="future_image">
-        <img src={future} alt="future" width="100%"/>
+        <img src={future} alt="future" width="100%" />
       </div>
       <div className="slide_bottom_line">
         <Triangle

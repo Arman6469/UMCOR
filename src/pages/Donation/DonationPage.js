@@ -38,15 +38,7 @@ export default function DonationPage() {
 
       <div className="donation">
         <input type="text" className="donation_input font-large font-black " />
-        <select
-          name=""
-          id=""
-          className="donation_currency font-large font-white font-br"
-        >
-          <option onClick={() => setCurrency("USD")}>USD</option>
-          <option onClick={() => setCurrency("EUR")}>EUR</option>
-          <option onClick={() => setCurrency("DRAM")}>DRAM</option>
-        </select>
+        <div className="donation_currency font-large font-white font-br">USD</div>
       </div>
 
       <div className="donation_size">

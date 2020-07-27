@@ -5,7 +5,6 @@ import image from "../../assets/1.jpg";
 import Line from "../../components/Line/Line";
 import Triangle from "../../components/Triangle/Triangle";
 import variables from "../../style/_variables.scss";
-import { Pagination } from "../../components/Pagination/Pagination";
 
 const projects = [
   { image: image, text: "Առողջապահություն" },
