@@ -6,7 +6,7 @@
   background-color: $white;
   &:hover{
       cursor: pointer;
-      opacity: 0.8;
+      background-color: $red;
       transition: all 0.4s;
   }
 }

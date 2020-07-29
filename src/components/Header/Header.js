@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import logo from "../../assets/UMCOR.png";
 import "./header.scss";
 import Line from "../../components/Line/Line";
@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
-  const [clicked, setClicked] = useState(false)
+  const [clicked, setClicked] = useState(false);
   return (
     <nav className="height-12 alc">
       <div className="width-13 jscac">
@@ -18,7 +18,9 @@ export default function Header() {
       <div className="navigation bg-black height-100 ">
         <ul>
           <li className="font-bb">
-            <NavLink to="/">Գլխավոր </NavLink>
+            <NavLink to="/" exact>
+              Գլխավոր{" "}
+            </NavLink>
           </li>
 
           <li>
@@ -71,9 +73,10 @@ export default function Header() {
           <Line
             style={{
               width: "70vw",
-              height: "1.4vh",
+              height: "0.5vw",
               backgroundColor: "#ca3b17",
               top: "91.5%",
+              pointerEvents: "none",
               left: "3%",
               transform: "translateY(-24%)",
               position: "absolute",
@@ -86,9 +89,11 @@ export default function Header() {
         </div>
 
         <div className="search-icon" onClick={() => setClicked(true)}>
-
           <FontAwesomeIcon icon={faSearch} />
-          <input type="text" className="search_input font-white font-br font-medium"/>
+          <input
+            type="text"
+            className="search_input font-white font-br font-medium"
+          />
         </div>
       </div>
     </nav>

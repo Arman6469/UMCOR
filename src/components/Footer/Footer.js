@@ -92,7 +92,7 @@ export default function Footer() {
         </div>
         <div className="footer_map">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24387.131069514504!2d44.4949130759498!3d40.178102570626976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abcf93707fda9%3A0xf6af0855c564d29c!2sKentron%2C%20Yerevan%2C%20Armenia!5e0!3m2!1sen!2s!4v1594882814745!5m2!1sen!2s"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17240.6154188469!2d44.5193408499698!3d40.19262113797574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abd28d9179213%3A0x56bcd80b4cda5c8f!2s16%20Karapet%20Ulnetsi%20St%2C%20Yerevan%2C%20Armenia!5e0!3m2!1sen!2s!4v1596012982606!5m2!1sen!2s"
             width="70%"
             title="map"
             height="80%"

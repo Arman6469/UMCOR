@@ -41,6 +41,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.4s;
+}
+.donation_single_size:hover {
+  background-color: $blue;
+  transition: all 0.4s;
+  cursor: pointer;
 }
 
 .donation_inputs_title {
@@ -62,4 +68,9 @@
   justify-content: center;
   align-items: center;
   border-radius: 0.5vw;
+}
+.donation_submit_button:hover{
+  background-color: $yellow;
+  transition: all 0.4s;
+  cursor: pointer;
 }

@@ -1,7 +1,7 @@
 @import "../../style/variables";
 
 .height-12 {
-  height: 5vw;
+  height: 4vw;
 }
 .width-13 {
   width: 13vw;
@@ -25,14 +25,14 @@
   ul {
     padding: 0;
     margin: 0;
-    width: 75%;
+    width: 72%;
     padding-left: 2vw;
     display: flex;
     height: 100%;
 
     li {
       list-style: none;
-      font-size: 1.2vw;
+      font-size: 1.1vw;
       display: flex;
       align-items: center;
       font-weight: 500;
@@ -55,7 +55,7 @@
 }
 
 %languages {
-  font-size: 1.2vw;
+  font-size: 1vw;
   color: $white;
   font-family: boko-regular;
 }
@@ -65,7 +65,7 @@
   border-right: 2px solid $white;
   margin-right: 0.5vw;
   padding-right: 0.5vw;
-  margin-left: 2vw;
+  // margin-left: 2vw;
 }
 .english {
   @extend %languages;
@@ -133,8 +133,6 @@ ul li:nth-child(6):hover ~ .moving_triangle {
 }
 a {
   text-decoration: none;
-}
-a:visited {
   color: inherit;
 }
 
@@ -148,7 +146,7 @@ ul li:nth-child(2):hover .about_us_dropdown {
 }
 
 .search-icon {
-  font-size: 2vw;
+  font-size: 1.7vw;
   margin-left: 1vw;
   width: 2vw;
   color: $yellow;
@@ -159,7 +157,7 @@ ul li:nth-child(2):hover .about_us_dropdown {
 .search_input {
   width: 0;
   box-sizing: border-box;
-  padding-left: 0.2vw;
+  margin-left: 0.5vw;
   opacity: 0;
   border: 0;
   border-bottom: 0.1vw solid $white;
@@ -168,12 +166,14 @@ ul li:nth-child(2):hover .about_us_dropdown {
 
   background-color: transparent;
 }
+
 .search_input:focus {
- width: 8vw;
+  width: 10vw;
   opacity: 1;
 }
 .search-icon:hover .search_input {
   opacity: 1;
   transition: all 0.3s ease-in-out;
-  width: 8vw;
+
+  width: 10vw;
 }

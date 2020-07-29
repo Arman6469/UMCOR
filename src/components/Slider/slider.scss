@@ -1,3 +1,5 @@
+@import "../../style/variables";
+
 .slider {
   width: 100%;
   position: relative;
@@ -62,7 +64,7 @@
   z-index: 12;
 }
 
-.slider_dots{
+.slider_dots {
   display: flex;
   width: 10vw;
   align-items: center;
@@ -73,6 +75,6 @@
   transform: translateX(-50%);
   z-index: 20;
 }
-.dot_active{
-  opacity: 0.8;
+.dot_active {
+  background-color: $red !important;
 }
