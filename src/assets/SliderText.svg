@@ -1,0 +1,53 @@
+<svg id="SliderText" xmlns="http://www.w3.org/2000/svg" width="508.219" height="354.438" viewBox="0 0 508.219 354.438">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3352a0;
+      }
+
+      .cls-1, .cls-2, .cls-6 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #ca3b17;
+      }
+
+      .cls-3 {
+        font-size: 105.641px;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        fill: #fff;
+        text-anchor: end;
+        font-family: Bokonique;
+        text-transform: uppercase;
+      }
+
+      .cls-4 {
+        font-size: 54.64px;
+      }
+
+      .cls-5 {
+        font-size: 61.659px;
+      }
+
+      .cls-6 {
+        fill: none;
+        stroke: #eac601;
+        stroke-width: 5px;
+        stroke-dasharray: 20 10;
+      }
+    </style>
+  </defs>
+  <path id="Rounded_Rectangle_1" data-name="Rounded Rectangle 1" class="cls-1" d="M598.265,164.141H773.729a4.5,4.5,0,0,1,4.5,4.5v74.5a4.5,4.5,0,0,1-4.5,4.5H598.265a4.5,4.5,0,0,1-4.5-4.5v-74.5A4.5,4.5,0,0,1,598.265,164.141Z" transform="translate(-432.219 -140)"/>
+  <path id="Rounded_Rectangle_1_copy" data-name="Rounded Rectangle 1 copy" class="cls-2" d="M436.717,393.55H935.939a4.5,4.5,0,0,1,4.5,4.5v91.878a4.5,4.5,0,0,1-4.5,4.5H436.717a4.5,4.5,0,0,1-4.5-4.5V398.05A4.5,4.5,0,0,1,436.717,393.55Z" transform="translate(-432.219 -140)"/>
+  <text id="ԱՋԱԿՑԵՆՔ" class="cls-3" transform="translate(313.819 14.149) scale(0.178)">ԱՋԱԿՑԵՆՔ</text>
+  <text id="ԺՈՂՈՎՐԴԻՆ_" data-name="ԺՈՂՈՎՐԴԻՆ՝" class="cls-4" transform="translate(373.289 143.561) scale(0.624)">ԺՈՂՈՎՐԴԻՆ՝</text>
+  <text id="հայ" class="cls-3" transform="translate(328.409 91.567) scale(0.68)">հայ</text>
+  <text id="ԿԵՐՏԵԼՈՒ" class="cls-3" transform="translate(307.754 178.882) scale(0.197 0.192)">ԿԵՐՏԵԼՈՒ</text>
+  <text id="իր" class="cls-5" transform="translate(295.798 240.097) scale(1.009)">իր</text>
+  <text id="ԱՊԱԳԱՆ" class="cls-3" transform="translate(491.014 340.912) scale(0.977)">ԱՊԱԳԱՆ</text>
+  <path id="Shape_17_copy" data-name="Shape 17 copy" class="cls-6" d="M752.211,308.957H900.472" transform="translate(-432.219 -140)"/>
+  <path id="Shape_17_copy_2" data-name="Shape 17 copy 2" class="cls-6" d="M478.211,308.957H626.472" transform="translate(-432.219 -140)"/>
+</svg>

@@ -56,7 +56,7 @@
 }
 
 .future_image {
-  width: 35vw;
+  width: 70vw;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -77,4 +77,7 @@
 }
 .dot_active {
   background-color: $red !important;
+}
+.slider_absolute_image{
+  width: 70vw;
 }

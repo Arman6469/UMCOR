@@ -72,12 +72,12 @@ export default function Header() {
           </div>
           <Line
             style={{
-              width: "70vw",
+              width: "75%",
               height: "0.5vw",
               backgroundColor: "#ca3b17",
               top: "91.5%",
               pointerEvents: "none",
-              left: "3%",
+              left: "5.5%",
               transform: "translateY(-24%)",
               position: "absolute",
             }}

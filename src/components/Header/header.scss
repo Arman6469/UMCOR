@@ -88,23 +88,23 @@ ul li:first-child:hover ~ .moving_triangle {
   display: flex;
 }
 ul li:nth-child(2):hover ~ .moving_triangle {
-  left: 19.5%;
+  left: 19%;
   display: flex;
 }
 ul li:nth-child(3):hover ~ .moving_triangle {
-  left: 31.5%;
+  left: 30%;
   display: flex;
 }
 ul li:nth-child(4):hover ~ .moving_triangle {
   display: flex;
-  left: 44.5%;
+  left: 42%;
 }
 ul li:nth-child(5):hover ~ .moving_triangle {
   display: flex;
-  left: 61%;
+  left: 57.5%;
 }
 ul li:nth-child(6):hover ~ .moving_triangle {
-  left: 73.5%;
+  left: 69.2%;
   display: flex;
 }
 
@@ -115,7 +115,7 @@ ul li:nth-child(6):hover ~ .moving_triangle {
   flex-direction: column;
   padding: 1vw;
   box-sizing: border-box;
-  width: 14vw;
+  width: 16vw;
   height: 10vw;
   background-color: $red;
   z-index: 15;
