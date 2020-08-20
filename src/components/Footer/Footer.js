@@ -21,7 +21,7 @@ export default function Footer() {
       <div className="red">
         <Line
           style={{
-            width: "60vw",
+            width: "57vw",
             height: "0.7vw",
             backgroundColor: variables.redcolor,
             borderRadius: "1vw",

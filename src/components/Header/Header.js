@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import logo from "../../assets/UMCOR.png";
 import "./header.scss";
 import Line from "../../components/Line/Line";
@@ -9,7 +9,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
-  const [clicked, setClicked] = useState(false);
   return (
     <nav className="height-12 alc">
       <div className="width-13 jscac">
@@ -54,13 +53,6 @@ export default function Header() {
           <li>
             <NavLink to="/donation">Նվիրատվություն</NavLink>
           </li>
-          <li
-            onClick={() =>
-              window.scrollTo({ top: "10000", behavior: "smooth" })
-            }
-          >
-            Կապ
-          </li>
 
           <div className="moving_triangle">
             <Triangle
@@ -72,12 +64,12 @@ export default function Header() {
           </div>
           <Line
             style={{
-              width: "75%",
+              width: "68%",
               height: "0.5vw",
               backgroundColor: "#ca3b17",
-              top: "91.5%",
+              top: "90.8%",
               pointerEvents: "none",
-              left: "5.5%",
+              left: "9%",
               transform: "translateY(-24%)",
               position: "absolute",
             }}
@@ -88,11 +80,12 @@ export default function Header() {
           <div className="english">Eng</div>
         </div>
 
-        <div className="search-icon" onClick={() => setClicked(true)}>
+        <div className="search-icon">
           <FontAwesomeIcon icon={faSearch} />
           <input
             type="text"
             className="search_input font-white font-br font-medium"
+            placeholder="Search..."
           />
         </div>
       </div>

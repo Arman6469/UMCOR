@@ -56,10 +56,10 @@
 }
 
 .future_image {
-  width: 70vw;
+  width: 42vw;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 46%;
   transform: translate(-50%, -50%);
   z-index: 12;
 }
@@ -79,5 +79,5 @@
   background-color: $red !important;
 }
 .slider_absolute_image{
-  width: 70vw;
+  width: 100%;
 }

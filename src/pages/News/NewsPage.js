@@ -104,7 +104,7 @@ export default function NewsPage() {
             <NewsCard
               elem={elem}
               key={index}
-              style={{ marginTop: "1vw", width: "17vw" }}
+              style={{ marginTop: "1vw", width: "19vw" }}
             />
           );
         })}

@@ -25,8 +25,8 @@
   ul {
     padding: 0;
     margin: 0;
-    width: 72%;
-    padding-left: 2vw;
+    width: 65%;
+    padding-left: 5vw;
     display: flex;
     height: 100%;
 
@@ -84,29 +84,26 @@
 }
 
 ul li:first-child:hover ~ .moving_triangle {
-  left: 8.5%;
+  left: 14%;
   display: flex;
 }
 ul li:nth-child(2):hover ~ .moving_triangle {
-  left: 19%;
+  left: 24.3%;
   display: flex;
 }
 ul li:nth-child(3):hover ~ .moving_triangle {
-  left: 30%;
+  left: 35%;
   display: flex;
 }
 ul li:nth-child(4):hover ~ .moving_triangle {
   display: flex;
-  left: 42%;
+  left: 47.7%;
 }
 ul li:nth-child(5):hover ~ .moving_triangle {
   display: flex;
-  left: 57.5%;
+  left: 63%;
 }
-ul li:nth-child(6):hover ~ .moving_triangle {
-  left: 69.2%;
-  display: flex;
-}
+
 
 .about_us_dropdown {
   position: absolute;
@@ -120,7 +117,7 @@ ul li:nth-child(6):hover ~ .moving_triangle {
   background-color: $red;
   z-index: 15;
   top: 88.5%;
-  left: 12.5%;
+  left: 16%;
 }
 
 .about_dropdown_text {
@@ -155,25 +152,18 @@ ul li:nth-child(2):hover .about_us_dropdown {
   float: left;
 }
 .search_input {
-  width: 0;
+  width: 16vw;
   box-sizing: border-box;
   margin-left: 0.5vw;
-  opacity: 0;
   border: 0;
   border-bottom: 0.1vw solid $white;
   color: $white;
   outline: none;
-
+  color: $white;
   background-color: transparent;
 }
 
-.search_input:focus {
-  width: 10vw;
-  opacity: 1;
-}
-.search-icon:hover .search_input {
-  opacity: 1;
-  transition: all 0.3s ease-in-out;
-
-  width: 10vw;
+::placeholder{
+  color: $white;
+  opacity: 0.8;
 }

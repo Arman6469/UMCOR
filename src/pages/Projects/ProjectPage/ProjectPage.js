@@ -31,7 +31,7 @@ export default function ProjectPage() {
           elNumInPage * currentPage
         )
       : [];
-  }, [projects, elNumInPage, currentPage]);
+  }, [ elNumInPage, currentPage]);
 
   return (
     <div>

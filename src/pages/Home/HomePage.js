@@ -104,7 +104,7 @@ export default function HomePage() {
         />
       </div>
       <section className="flex-column mt-5 pos-relative">
-        <div className="jsb" style={{ width: "56vw" }}>
+        <div className="jsc" style={{ width: "57vw" }}>
           {news.map((elem, index) => {
             return <NewsCard elem={elem} key={index} />;
           })}

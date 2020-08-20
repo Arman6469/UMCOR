@@ -9,8 +9,8 @@ import "./slider.scss";
 import Line from "../../components/Line/Line";
 import variables from "../../style/_variables.scss";
 import Triangle from "../../components/Triangle/Triangle";
-import future from "../../assets/Future.png";
-import {ReactComponent as SliderImage} from "../../assets/SliderText.svg";
+import SliderImage from "../../assets/SliderText.svg";
+import Future from "../../assets/Future.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -92,8 +92,7 @@ export default function Slider({ sliderImages }) {
       </div>
 
       <div className="future_image">
-        {/* <img src={SliderImage} alt="future" width="100%" /> */}
-        <SliderImage className="slider_absolute_image" /> 
+        <img src={Future} alt="future" width="100%" />
       </div>
       <div className="slide_bottom_line">
         <Triangle
@@ -110,7 +109,7 @@ export default function Slider({ sliderImages }) {
         <Line
           style={{
             position: "absolute",
-            width: "50vw",
+            width: "57vw",
             height: "0.8vw",
             top: "99%",
             left: "50%",
