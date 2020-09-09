@@ -1,11 +1,11 @@
-import React, {useState, useMemo} from "react";
+import React, { useState, useMemo } from "react";
 import "./newspage.scss";
 import NewsCard from "../../components/NewsCard/NewsCard";
 import img1 from "../../assets/1.jpg";
 import Line from "../../components/Line/Line";
 import Triangle from "../../components/Triangle/Triangle";
 import variables from "../../style/_variables.scss";
-import {Pagination} from "../../components/Pagination/Pagination" 
+import { Pagination } from "../../components/Pagination/Pagination";
 
 const news = [
   {
@@ -65,15 +65,14 @@ export default function NewsPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const productsInPage = useMemo(() => {
     return news?.length
-      ? news.slice(
-          (currentPage - 1) * elNumInPage,
-          elNumInPage * currentPage
-        )
+      ? news.slice((currentPage - 1) * elNumInPage, elNumInPage * currentPage)
       : [];
   }, [news, elNumInPage, currentPage]);
   return (
     <div className="flex-column width-100 padding-t-25">
-      <h1 className="font-h1 font-black font-br upper" id="title">Նորություններ </h1>
+      <h1 className="font-h1 font-black font-br upper" id="title">
+        Նորություններ{" "}
+      </h1>
       <Line
         style={{
           width: "29vw",
@@ -110,9 +109,9 @@ export default function NewsPage() {
         })}
       </div>
       <Pagination
-          length={Math.ceil(news.length / elNumInPage)}
-          handleChange={(page) => setCurrentPage(page)}
-        />
+        length={Math.ceil(news.length / elNumInPage)}
+        handleChange={(page) => setCurrentPage(page)}
+      />
     </div>
   );
 }
